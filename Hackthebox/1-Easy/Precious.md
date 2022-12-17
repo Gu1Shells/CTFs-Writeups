@@ -37,7 +37,7 @@ Usando o comando *strings* nós deparamos com as strings deste documento.
 ![image](https://user-images.githubusercontent.com/120592559/208182258-85f43abf-46cd-4cde-8ec3-6a4c8c7f889b.png)
 
 Explicação: Esta vulnerabilidade com o pdfkit v0.8.6 acontece quando a aplicação tentar renderizar uma *URL* que contém parâmetros de string na consulta. Ou seja, se colocarmos a URL e logo em seguida a string *'%20`sleep 5`'* com o comando *sleep 5*, o servidor respondera após 5 segundos.
-POC: https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
+[POC](https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795)
 
 3- EXPLORAÇÃO
 -------
@@ -98,7 +98,7 @@ Colocamos este conteúdo no arquivo e um comando para ser executado: `sh`
 #ROOT!!
 
 ![image](https://user-images.githubusercontent.com/120592559/208241574-03c56c66-23d0-4d60-bfd7-33a7d2856ece.png)
-![image](https://user-images.githubusercontent.com/120592559/208241589-a663e532-0e64-41a3-8851-d4d9404a68fd.png)
+![image](https://user-images.githubusercontent.com/120592559/208243824-0e0e54f2-66f8-467f-9682-1b6f5fa7ac5d.png)
 
 Obrigado por lerem ;) 
 
