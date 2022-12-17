@@ -3,9 +3,10 @@ Olá a todos! Meu primeiro write-up com uma máquina simples da HTB, esperem que
 Maquina: Precious /
 OS: Linux
 
-Topicos: 
-1- Enumeração 2- identificando Vulnerabilidade 3- Exploração 4-Escalação de Privilégios 5- Pós-exploração
+Enumeração - identificando Vulnerabilidade - Exploração - Escalação de Privilégios - Pós-exploração
 -------------------------------------------------------------------------------------------------
+1- Enumeração
+----
 Como de costume, verifico se no IP fornecido á algum endereço de URL para colocarmos em nossa lista /etc/hosts
 . Adicionamos: precious.htb
 
