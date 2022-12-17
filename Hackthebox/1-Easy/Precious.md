@@ -79,7 +79,29 @@ Olhando dentro do script:
 
 ![image](https://user-images.githubusercontent.com/120592559/208187438-a29da456-2dad-46a3-81dd-db899740be84.png)
 
-Já adianto que entendo pouco coisa de Ruby. Entretanto, resumidamente, e um script que verifica se as versões dos pacotes se a versão for diferente ou igual aqui está no arquivo ele nos retorna um alerta.
+OBS: Entendo pouco coisa de Ruby. Porém, e um script que verifica as versões dos pacotes que estão referenciados no arquivo ´dependencies.yml´.
+Outro ponto a ser visto, e que ele busca o arquivo dependencies.yml em um caminho *relativo*. Podemos usar isto para forjar um execução de comando mudando o ´PATH´. Para testarmos nosso teoria vamos criar um arquivo chamado dependencies.yml no /tmp/. o conteudo do arquivo: "test file .yml"  
+![image](https://user-images.githubusercontent.com/120592559/208241128-10634412-193a-4543-83ee-9c9aace41b14.png)
+
+exportamos o caminho PATH para /tmp 
+
+![image](https://user-images.githubusercontent.com/120592559/208241184-fe352d69-bfe8-4da0-a1b0-47945cb00619.png)
+
+Executando o arquivo, podemos observar que ele buscou e leu nosso arquivo. Ótimo! agora vamos pro #ROOT.
+Procurando por algum artigo que nós diga como executar comandos por arquivo .yml me deparei com este script: https://gist.github.com/staaldraad/89dffe369e1454eedd3306edc8a7e565
+
+![image](https://user-images.githubusercontent.com/120592559/208241462-f6b6e878-a43f-441c-bb1e-1fd7e2971d55.png)
+
+Colocamos este conteudo no arquivo e um comando para ser executado: ´sh´
+
+![image](https://user-images.githubusercontent.com/120592559/208241554-01e77c69-b852-48f4-96db-52dd61a2c002.png)
+
+#ROOT!!
+
+![image](https://user-images.githubusercontent.com/120592559/208241574-03c56c66-23d0-4d60-bfd7-33a7d2856ece.png)
+![image](https://user-images.githubusercontent.com/120592559/208241589-a663e532-0e64-41a3-8851-d4d9404a68fd.png)
+
+Obrigado por lerem ;) 
 
 
 
